@@ -51,11 +51,18 @@
     "@storybook/manager-webpack4": "^6.5.13",
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.11.4",
     "css-loader": "^6.7.2",
+    "eslint": "^8.28.0",
     "postcss": "^8.4.19"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "my-storybook@0.1.0"
+  "_id": "my-storybook@0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/josekadeveloper/StorybookComponents.git",
+  "author": "jockdeveloper <jockdeveloper@gmail.com>",
+  "license": "MIT"
 }
