@@ -1,7 +1,28 @@
 {
-  "name": "my-storybook",
+  "name": "joseka-my-storybook-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "homepage": "https://react-portfolio-dashboar-e457f.web.app/",
+  "repository": {
+    "url": "https://github.com/josekadeveloper/StorybookComponents.git",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "typescript": ">=4.9"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -17,10 +38,12 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "build-storybook",
+    "build": "yarn clean && tsc && yarn copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=78522e1b6c45"
+    "chromatic": "npx chromatic --project-token=78522e1b6c45",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/"
   },
   "eslintConfig": {
     "extends": [
@@ -55,14 +78,10 @@
     "@typescript-eslint/parser": "^5.44.0",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.11.4",
+    "copyfiles": "^2.4.1",
     "css-loader": "^6.7.2",
     "eslint": "^8.28.0",
-    "postcss": "^8.4.19"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "my-storybook@0.1.0",
-  "main": "index.js",
-  "repository": "https://github.com/josekadeveloper/StorybookComponents.git",
-  "author": "jockdeveloper <jockdeveloper@gmail.com>",
-  "license": "MIT"
+    "postcss": "^8.4.19",
+    "rimraf": "^3.0.2"
+  }
 }
